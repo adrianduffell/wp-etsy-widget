@@ -36,8 +36,8 @@ require dirname( __FILE__ ) . '/vendor/autoload.php';
 
 	add_action( 'wp_enqueue_scripts', function() {
 		wp_enqueue_style(
-			'extended_tweets',
-			plugins_url( '/../public/etsy-widget.css', __FILE__ ),
+			'etsy_widget',
+			plugins_url( '/public/etsy-widget.css', __FILE__ ),
 			[],
 			'1.0.0'
 		);

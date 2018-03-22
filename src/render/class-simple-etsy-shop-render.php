@@ -1,6 +1,6 @@
 <?php
 /**
- * Etsy Widget for WordPress: WP_Gallery_Etsy_Shop_Render class.
+ * Etsy Widget for WordPress: Simple_Etsy_Shop_Render  class.
  *
  * @package wp-etsy-widget
  */
@@ -25,7 +25,7 @@ class Simple_Etsy_Shop_Render implements Etsy_Shop_Render {
 		$profile = $shop['User']['Profile'];
 
 		return sprintf(
-			'<p style="line-height: 1"><b><img src="%s" style="float: left; width:37.5px; height:37.5px; margin-right: 1ex " />%s</b><br/><span style=" display:inline-block; padding-top: 0.5ex">%s</span><br style="clear:left;"></p>',
+			'<p class="etsy-widget-shop-container"><img class="etsy-widget-shop-icon" src="%s" /><span class="etsy-widget-shop-name">%s</span><br/><span class="etsy-widget-shop-location">%s</span></p>',
 			esc_attr( $shop['icon_url_fullxfull'] ),
 			esc_html( $shop['shop_name'] ),
 			esc_html( $profile['city'] . ', ' . $profile['region'] )
