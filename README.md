@@ -7,13 +7,6 @@ Displays the latest products from a shop as a grid of thumbnails using a WordPre
 - PHP 7.1+
 - WordPress 4.9
 
-## Installation
-
-Install on the command line via Composer.
-```shell
-composer require solidwp/functions
-```
-
 ## Usage
 
 An Etsy developer key is required and must be set using an environment variable.
