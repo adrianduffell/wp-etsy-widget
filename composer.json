@@ -1,0 +1,33 @@
+{
+  "name": "adrianduffell/etsy",
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/home/dev/packages/solid-wp-cache"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^6.5",
+    "squizlabs/php_codesniffer": "^3.2",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
+    "automattic/phpcs-neutron-standard": "^1.2",
+    "wp-coding-standards/wpcs": "^0.14.1",
+    "phpunit/phpunit": "^6",
+    "mockery/mockery": "^1.0"
+  },
+  "require": {
+    "solidwp/config": "^0.1.0",
+    "pimple/pimple": "~3.0"
+  },
+  "autoload": {
+    "classmap": ["src/"]
+  },
+  "scripts": {
+    "phpunit" : "./vendor/bin/phpunit",
+    "phpcs" : "./vendor/bin/phpcs -s",
+    "test": [
+      "@phpunit",
+      "@phpcs"
+    ]
+  }
+}

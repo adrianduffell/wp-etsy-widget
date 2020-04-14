@@ -1,0 +1,26 @@
+.etsy-widget-shop-container {
+  line-height: 1
+}
+
+.etsy-widget-shop-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.etsy-widget-shop-name {
+  font-weight: bold;
+}
+
+.etsy-widget-shop-icon {
+  float: left;
+  width:37.5px;
+  height:37.5px;
+  margin-right: 1ex;
+}
+
+.etsy-widget-shop-location {
+  display:inline-block;
+  padding-top: 0.5ex;
+  line-height: 1
+}

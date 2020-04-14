@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Coding Standards for Plugins">
+	<description>Generally-applicable sniffs for WordPress plugins</description>
+
+	<rule ref="WordPress-Core" />
+	<rule ref="WordPress-Docs" />
+	<rule ref="NeutronStandard"/>
+
+	<!-- Check all PHP files in directory tree by default. -->
+	<arg name="extensions" value="php"/>
+	<file>.</file>
+
+	<!-- Show progress and sniff codes in all reports -->
+	<arg value="ps"/>
+
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	
+	<rule ref="NeutronStandard.Whitespace.RequireParenthesisSpacing.Missing">
+		<exclude-pattern>./</exclude-pattern>
+	</rule>
+
+	<rule ref="NeutronStandard.AssignAlign.DisallowAssignAlign.Aligned">
+		<exclude-pattern>./</exclude-pattern>
+	</rule>
+	
+	<rule ref="NeutronStandard.Functions">
+		<exclude-pattern>./container.php</exclude-pattern>
+	</rule>
+
+	<rule ref="Generic.Formatting.MultipleStatementAlignment.NotSameWarning">
+		<exclude-pattern>./</exclude-pattern>
+	</rule>
+
+	<rule ref="NeutronStandard.Functions.LongFunction.LongFunction">
+		<exclude-pattern>./</exclude-pattern>
+	</rule>
+
+
+</ruleset>
