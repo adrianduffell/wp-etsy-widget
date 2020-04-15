@@ -58,7 +58,7 @@ class Etsy_Latest_WP_Widget extends \WP_Widget {
 	 * parent constructor.
 	 *
 	 * @param Config              $config Dependency.
-	 * @param Etsy_API_Client    $etsy_api_client Dependency.
+	 * @param Etsy_API_Client     $etsy_api_client Dependency.
 	 * @param Etsy_Shop_Render    $etsy_shop_render Dependency.
 	 * @param Gallery_Render      $gallery_render Dependency.
 	 * @param Widget_Input_Render $widget_input_render Dependency.
@@ -135,7 +135,7 @@ class Etsy_Latest_WP_Widget extends \WP_Widget {
 			return [
 				'image' => $listing['Images'][0]['url_170x135'],
 				'title' => $listing['title'],
-				'alt'   => '', // No alt text supplied by etsy :(
+				'alt'   => '', // No alt text supplied by etsy.
 				'url'   => $listing['url'],
 			];
 		}, $shop['Listings'] );
