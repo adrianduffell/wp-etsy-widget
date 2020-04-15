@@ -6,7 +6,6 @@
     "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
     "automattic/phpcs-neutron-standard": "^1.2",
     "wp-coding-standards/wpcs": "^0.14.1",
-    "phpunit/phpunit": "^6",
     "mockery/mockery": "^1.0"
   },
   "require": {
