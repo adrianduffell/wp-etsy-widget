@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a79d92ceb6ea90f51c48eed8d58b7468",
+    "content-hash": "3a67f810cfdbde9ab655c274ace60990",
     "packages": [
         {
             "name": "pimple/pimple",
@@ -104,91 +104,6 @@
                 "psr"
             ],
             "time": "2017-02-14T16:28:37+00:00"
-        },
-        {
-            "name": "solidwp/config",
-            "version": "0.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/adrianduffell/solid-wp-config.git",
-                "reference": "7f93916f86b14d6372ffc14a9ef8e6da05fa80a7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/adrianduffell/solid-wp-config/zipball/7f93916f86b14d6372ffc14a9ef8e6da05fa80a7",
-                "reference": "7f93916f86b14d6372ffc14a9ef8e6da05fa80a7",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1",
-                "solidwp/functions": "^0.1.0"
-            },
-            "require-dev": {
-                "automattic/phpcs-neutron-standard": "^1.2",
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
-                "mockery/mockery": "^1.0",
-                "phpunit/phpunit": "^6",
-                "squizlabs/php_codesniffer": "^3.2",
-                "wp-coding-standards/wpcs": "^0.14.1"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Adrian Duffell"
-                }
-            ],
-            "description": "For reading configuration strings within WordPress plugins or themes.",
-            "time": "2018-03-19T00:36:09+00:00"
-        },
-        {
-            "name": "solidwp/functions",
-            "version": "0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/adrianduffell/solid-wp-functions.git",
-                "reference": "17b771c6ed4f897f4fc25f85e15cd686b895a035"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/adrianduffell/solid-wp-functions/zipball/17b771c6ed4f897f4fc25f85e15cd686b895a035",
-                "reference": "17b771c6ed4f897f4fc25f85e15cd686b895a035",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
-                "phpunit/phpunit": "^6",
-                "squizlabs/php_codesniffer": "^3.2",
-                "wp-coding-standards/wpcs": "^0.14.1"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Adrian Duffell"
-                }
-            ],
-            "description": "Provides WordPress core functions as invokable classes.",
-            "time": "2018-03-18T13:16:27+00:00"
         }
     ],
     "packages-dev": [
@@ -1214,6 +1129,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2018-01-06T05:45:45+00:00"
         },
         {
@@ -1921,12 +1837,12 @@
             "version": "0.14.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git",
+                "url": "https://github.com/WordPress/WordPress-Coding-Standards.git",
                 "reference": "cf6b310caad735816caef7573295f8a534374706"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/cf6b310caad735816caef7573295f8a534374706",
+                "url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/cf6b310caad735816caef7573295f8a534374706",
                 "reference": "cf6b310caad735816caef7573295f8a534374706",
                 "shasum": ""
             },
