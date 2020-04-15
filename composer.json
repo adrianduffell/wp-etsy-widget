@@ -16,7 +16,6 @@
     "mockery/mockery": "^1.0"
   },
   "require": {
-    "solidwp/config": "^0.1.0",
     "pimple/pimple": "~3.0"
   },
   "autoload": {
