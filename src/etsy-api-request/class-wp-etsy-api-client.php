@@ -45,7 +45,7 @@ class WP_Etsy_API_Client implements Etsy_API_Client {
 		$return = json_decode( $body, true );
 
 		set_transient( $cache_key, $return, 3600 );
-		
+
 		return $return;
 	}
 }
