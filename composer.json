@@ -1,5 +1,5 @@
 {
-  "name": "adrianduffell/etsy",
+  "name": "adrianduffell/wp-etsy-widget",
   "description": "WordPress widget to display the latest products from a shop as a grid of thumbnails.",
   "require-dev": {
     "phpunit/phpunit": "^6.5",
