@@ -9,8 +9,6 @@ declare( strict_types=1 );
 
 namespace WP_Etsy_Widget;
 
-use \Solid_WP\Config;
-
 /**
  * A WordPress widget that displays a Twitter User Timeline.
  *
@@ -122,7 +120,7 @@ class Etsy_Latest_WP_Widget extends \WP_Widget {
 				'Listings:%s:0:active/Images,User/Profile',
 				$preview_count
 			),
-			'api_key'  => $this->config->get( 'etsy_key' ),
+			'api_key'  => $this->config->get_etsy_developer_key(),
 		];
 
 		$response = $this->etsy_api_client->get( $endpoint, $params );

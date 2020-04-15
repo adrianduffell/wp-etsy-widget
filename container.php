@@ -16,7 +16,7 @@ $container['etsy_api_client'] = function( $c ) {
 };
 
 $container['config'] = function( $c ) {
-	return new \Solid_WP\Env_Config();
+	return new Env_Config();
 };
 
 $container['widget_input_render'] = function( $c ) {
