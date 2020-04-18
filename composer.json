@@ -1,18 +1,13 @@
 {
   "name": "adrianduffell/etsy",
-  "repositories": [
-    {
-      "type": "path",
-      "url": "/home/dev/packages/solid-wp-cache"
-    }
-  ],
+  "description": "WordPress widget to display the latest products from a shop as a grid of thumbnails.",
+  "license": "GPL-3.0-or-later",
   "require-dev": {
     "phpunit/phpunit": "^6.5",
     "squizlabs/php_codesniffer": "^3.2",
     "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
     "automattic/phpcs-neutron-standard": "^1.2",
     "wp-coding-standards/wpcs": "^0.14.1",
-    "phpunit/phpunit": "^6",
     "mockery/mockery": "^1.0"
   },
   "require": {
