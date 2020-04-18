@@ -1,5 +1,5 @@
 {
-  "name": "adrianduffell/wp-etsy-widget",
+  "name": "adrianduffell/etsy",
   "description": "WordPress widget to display the latest products from a shop as a grid of thumbnails.",
   "license": "GPL-3.0-or-later",
   "require-dev": {
