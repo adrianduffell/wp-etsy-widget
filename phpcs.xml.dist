@@ -36,9 +36,5 @@
 		<exclude-pattern>./</exclude-pattern>
 	</rule>
 
-	<!-- Conflict with WordPress standard. -->
-	<rule ref="NeutronStandard.Arrays.DisallowLongformArray.LongformArray">
-		<exclude-pattern>./</exclude-pattern>
-	</rule>
 
 </ruleset>
