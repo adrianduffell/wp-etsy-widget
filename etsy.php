@@ -30,18 +30,24 @@ require dirname( __FILE__ ) . '/vendor/autoload.php';
 	$container = require 'container.php';
 
 	// Hooks.
-	add_action( 'widgets_init', function() use ( $container ) {
-		register_widget( $container['widget'] );
-	} );
+	add_action(
+		'widgets_init',
+		function() use ( $container ) {
+			register_widget( $container['widget'] );
+		}
+	);
 
-	add_action( 'wp_enqueue_scripts', function() {
-		wp_enqueue_style(
-			'etsy_widget',
-			plugins_url( '/public/etsy-widget.css', __FILE__ ),
-			[],
-			'1.0.0'
-		);
-	});
+	add_action(
+		'wp_enqueue_scripts',
+		function() {
+			wp_enqueue_style(
+				'etsy_widget',
+				plugins_url( '/public/etsy-widget.css', __FILE__ ),
+				array(),
+				'1.0.0'
+			);
+		}
+	);
 
 } )();
 

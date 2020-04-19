@@ -66,7 +66,8 @@ class WP_Gallery_Render implements Gallery_Render {
 	 * @return string Markup fragment.
 	 */
 	private function svg_total( int $total ) : string {
-		return sprintf( '
+		return sprintf(
+			'
 			<svg xmlns="http://www.w3.org/2000/svg" width="170" height="135" viewBox="0 0 170 135">
 				<rect width="100%%" height="100%%" fill="#cccccc" fill-opacity="0.15" />
 				<text x="85" y="70" font-family="sans-serif" font-size="50" text-anchor="middle" fill="#E55400" text-rendering="optimizeLegibility">

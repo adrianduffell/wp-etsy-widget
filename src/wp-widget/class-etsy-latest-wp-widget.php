@@ -70,17 +70,17 @@ class Etsy_Latest_WP_Widget extends \WP_Widget {
 		Gallery_Render $gallery_render,
 		Widget_Input_Render $widget_input_render
 	) {
-		$this->config = $config;
-		$this->etsy_api_client = $etsy_api_client;
-		$this->etsy_shop_render = $etsy_shop_render;
-		$this->gallery_render = $gallery_render;
+		$this->config              = $config;
+		$this->etsy_api_client     = $etsy_api_client;
+		$this->etsy_shop_render    = $etsy_shop_render;
+		$this->gallery_render      = $gallery_render;
 		$this->widget_input_render = $widget_input_render;
 
-		$widget_options = [
+		$widget_options = array(
 			'classname'                   => 'etsy_latest1',
 			'description'                 => __( 'Display the latest products on an Etsy store.', 'wp_etsy_plugin' ),
 			'customize_selective_refresh' => true,
-		];
+		);
 		parent::__construct(
 			'etsy_latest1',
 			'Display the latest products on an Etsy store.',
@@ -115,13 +115,13 @@ class Etsy_Latest_WP_Widget extends \WP_Widget {
 
 		$endpoint = sprintf( '/shops/%s', $instance['shop'] );
 
-		$params = [
+		$params = array(
 			'includes' => sprintf(
 				'Listings:%s:0:active/Images,User/Profile',
 				$preview_count
 			),
 			'api_key'  => $this->config->get_etsy_developer_key(),
-		];
+		);
 
 		$response = $this->etsy_api_client->get( $endpoint, $params );
 
@@ -131,14 +131,17 @@ class Etsy_Latest_WP_Widget extends \WP_Widget {
 
 		$shop = $response['results'][0];
 
-		$gallery_items = array_map( function( array $listing ) : array {
-			return [
-				'image' => $listing['Images'][0]['url_170x135'],
-				'title' => $listing['title'],
-				'alt'   => '', // No alt text supplied by etsy.
-				'url'   => $listing['url'],
-			];
-		}, $shop['Listings'] );
+		$gallery_items = array_map(
+			function( array $listing ) : array {
+				return array(
+					'image' => $listing['Images'][0]['url_170x135'],
+					'title' => $listing['title'],
+					'alt'   => '', // No alt text supplied by etsy.
+					'url'   => $listing['url'],
+				);
+			},
+			$shop['Listings']
+		);
 
 		echo $this->etsy_shop_render->get( $shop );
 
@@ -161,12 +164,12 @@ class Etsy_Latest_WP_Widget extends \WP_Widget {
 	public function form( $instance ) {
 		$instance = wp_parse_args(
 			$instance,
-			[
+			array(
 				'title'   => '',
 				'shop'    => '',
 				'columns' => '3',
 				'rows'    => '3',
-			]
+			)
 		);
 
 		echo $this->widget_input_render->get( // WPCS: XSS ok.
@@ -211,18 +214,18 @@ class Etsy_Latest_WP_Widget extends \WP_Widget {
 	 * @return array Settings to save.
 	 */
 	public function update( $new_instance, $old_instance ) {
-		$new_title = strip_tags( trim( $new_instance['title'] ) );
+		$new_title    = strip_tags( trim( $new_instance['title'] ) );
 		$new_username = preg_replace(
 			'/[^A-Za-z0-9_]/',
 			'',
 			strip_tags( $new_instance['shop'] )
 		);
-		$new_columns = (int) filter_var(
+		$new_columns  = (int) filter_var(
 			$new_instance['columns'],
 			FILTER_SANITIZE_NUMBER_FLOAT,
 			FILTER_FLAG_ALLOW_FRACTION
 		);
-		$new_rows = (int) filter_var(
+		$new_rows     = (int) filter_var(
 			$new_instance['rows'],
 			FILTER_SANITIZE_NUMBER_FLOAT,
 			FILTER_FLAG_ALLOW_FRACTION
@@ -244,12 +247,12 @@ class Etsy_Latest_WP_Widget extends \WP_Widget {
 			$new_columns = 10;
 		}
 
-		return [
+		return array(
 			'title'   => $new_title,
 			'shop'    => $new_username,
 			'rows'    => $new_rows,
 			'columns' => $new_columns,
-		];
+		);
 	}
 
 }
