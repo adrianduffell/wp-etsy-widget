@@ -24,7 +24,7 @@ class WP_Etsy_API_Client implements Etsy_API_Client {
 	 *
 	 * @return array|null Response data or null on error.
 	 */
-	function get( string $endpoint, array $params = [] ) : ?array {
+	function get( string $endpoint, array $params = array() ) : ?array {
 
 		$cache_key = 'etsy_widget' . sha1( $endpoint . json_encode( $params ) );
 
@@ -34,9 +34,9 @@ class WP_Etsy_API_Client implements Etsy_API_Client {
 			return $cache_value;
 		}
 
-		$url = self::BASE_URL . $endpoint . '?' . http_build_query( $params );
+		$url      = self::BASE_URL . $endpoint . '?' . http_build_query( $params );
 		$response = wp_safe_remote_get( $url );
-		$body = wp_remote_retrieve_body( $response );
+		$body     = wp_remote_retrieve_body( $response );
 
 		if ( '' === $body ) {
 			return null;
