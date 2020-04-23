@@ -3,11 +3,10 @@
   "description": "WordPress widget to display the latest products from a shop as a grid of thumbnails.",
   "license": "GPL-3.0-or-later",
   "require-dev": {
-    "phpunit/phpunit": "^6.5",
+    "phpunit/phpunit": "^7",
     "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
     "automattic/phpcs-neutron-standard": "~1.5",
-    "wp-coding-standards/wpcs": "~2.2",
-    "mockery/mockery": "^1.0"
+    "wp-coding-standards/wpcs": "~2.2"
   },
   "require": {
     "pimple/pimple": "~3.0"
