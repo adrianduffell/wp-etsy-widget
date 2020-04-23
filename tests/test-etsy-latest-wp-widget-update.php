@@ -15,7 +15,7 @@ namespace WP_Etsy_Widget;
 class Test_Etsy_Latest_WP_Widget_Update extends \WP_UnitTestCase {
 
 	/**
-	 * Setup the testcase.
+	 * Setup the test case.
 	 */
 	public function setup() {
 		$container = new \Pimple\Container();
