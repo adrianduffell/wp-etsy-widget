@@ -62,6 +62,8 @@ class Test_Etsy_Latest_WP_Widget_Update extends \WP_UnitTestCase {
 		);
 
 		$this->container = $container;
+
+		parent::setup();
 	}
 
 	/**
