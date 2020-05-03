@@ -15,6 +15,13 @@ namespace WP_Etsy_Widget;
 class Test_Etsy_Latest_WP_Widget_Update extends \WP_UnitTestCase {
 
 	/**
+	 * Pimple dependency injection container.
+	 *
+	 * @var \Pimple\Container
+	 */
+	private $container = null;
+
+	/**
 	 * Setup the test case.
 	 */
 	public function setup() {
@@ -62,6 +69,8 @@ class Test_Etsy_Latest_WP_Widget_Update extends \WP_UnitTestCase {
 		);
 
 		$this->container = $container;
+
+		parent::setup();
 	}
 
 	/**
@@ -74,13 +83,13 @@ class Test_Etsy_Latest_WP_Widget_Update extends \WP_UnitTestCase {
 		$a = array(
 			'title'   => 'Latest Etsy Products',
 			'shop'    => 'foo_shop',
-			'columns' => '3',
-			'rows'    => '3',
+			'columns' => 3,
+			'rows'    => 3,
 		);
 
 		$test = $widget->update( $a, array() );
 
-		$this->assertSame( $test, $test );
+		$this->assertEqualSets( $test, $a );
 	}
 
 	/**
@@ -96,8 +105,8 @@ class Test_Etsy_Latest_WP_Widget_Update extends \WP_UnitTestCase {
 		$new_instance = array(
 			'title'   => $title,
 			'shop'    => 'foo_shop',
-			'columns' => '3',
-			'rows'    => '3',
+			'columns' => 3,
+			'rows'    => 3,
 		);
 
 		$test = $widget->update( $new_instance, array() );
@@ -137,8 +146,8 @@ class Test_Etsy_Latest_WP_Widget_Update extends \WP_UnitTestCase {
 		$new_instance = array(
 			'title'   => 'Latest Etsy Products',
 			'shop'    => $shop,
-			'columns' => '1',
-			'rows'    => '1',
+			'columns' => 1,
+			'rows'    => 1,
 		);
 
 		$test = $widget->update( $new_instance, array() );
