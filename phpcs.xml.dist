@@ -46,4 +46,9 @@
 		<exclude-pattern>tests/bootstrap.php</exclude-pattern>
 	</rule>
 
+	<!-- WordPress widget abstract class uses mixed types. -->
+	<rule ref="NeutronStandard.Functions.TypeHint.NoArgumentType">
+		<exclude-pattern>src/wp-widget/*</exclude-pattern>
+	</rule>
+
 </ruleset>
