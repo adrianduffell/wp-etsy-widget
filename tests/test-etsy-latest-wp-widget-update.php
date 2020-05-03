@@ -15,6 +15,13 @@ namespace WP_Etsy_Widget;
 class Test_Etsy_Latest_WP_Widget_Update extends \WP_UnitTestCase {
 
 	/**
+	 * Pimple dependency injection container.
+	 *
+	 * @var \Pimple\Container
+	 */
+	private $container = null;
+
+	/**
 	 * Setup the test case.
 	 */
 	public function setup() {
