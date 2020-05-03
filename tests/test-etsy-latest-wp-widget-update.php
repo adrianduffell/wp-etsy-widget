@@ -89,7 +89,7 @@ class Test_Etsy_Latest_WP_Widget_Update extends \WP_UnitTestCase {
 
 		$test = $widget->update( $a, array() );
 
-		$this->assertSame( $test, $test );
+		$this->assertEqualSets( $test, $a );
 	}
 
 	/**
