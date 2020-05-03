@@ -83,8 +83,8 @@ class Test_Etsy_Latest_WP_Widget_Update extends \WP_UnitTestCase {
 		$a = array(
 			'title'   => 'Latest Etsy Products',
 			'shop'    => 'foo_shop',
-			'columns' => '3',
-			'rows'    => '3',
+			'columns' => 3,
+			'rows'    => 3,
 		);
 
 		$test = $widget->update( $a, array() );
@@ -105,8 +105,8 @@ class Test_Etsy_Latest_WP_Widget_Update extends \WP_UnitTestCase {
 		$new_instance = array(
 			'title'   => $title,
 			'shop'    => 'foo_shop',
-			'columns' => '3',
-			'rows'    => '3',
+			'columns' => 3,
+			'rows'    => 3,
 		);
 
 		$test = $widget->update( $new_instance, array() );
@@ -146,8 +146,8 @@ class Test_Etsy_Latest_WP_Widget_Update extends \WP_UnitTestCase {
 		$new_instance = array(
 			'title'   => 'Latest Etsy Products',
 			'shop'    => $shop,
-			'columns' => '1',
-			'rows'    => '1',
+			'columns' => 1,
+			'rows'    => 1,
 		);
 
 		$test = $widget->update( $new_instance, array() );
