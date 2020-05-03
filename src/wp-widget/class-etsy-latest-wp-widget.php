@@ -97,7 +97,7 @@ class Etsy_Latest_WP_Widget extends \WP_Widget {
 	 * @param array $instance The settings for the instance of the widget.
 	 * @return void
 	 */
-	public function widget( $args, $instance ) {
+	public function widget( $args, $instance ) : void {
 
 		if ( empty( $instance['shop'] ) ) {
 			return;
@@ -160,8 +160,9 @@ class Etsy_Latest_WP_Widget extends \WP_Widget {
 	 * Admin form
 	 *
 	 * @param array $instance Current settings for instance.
+	 * @return void
 	 */
-	public function form( $instance ) {
+	public function form( $instance ) : void {
 		$instance = wp_parse_args(
 			$instance,
 			array(
@@ -213,7 +214,7 @@ class Etsy_Latest_WP_Widget extends \WP_Widget {
 	 * @param array $old_instance Previous settings this instance.
 	 * @return array Settings to save.
 	 */
-	public function update( $new_instance, $old_instance ) {
+	public function update( $new_instance, $old_instance ) : array {
 		$new_title    = strip_tags( trim( $new_instance['title'] ) );
 		$new_username = preg_replace(
 			'/[^A-Za-z0-9_]/',
