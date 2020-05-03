@@ -51,4 +51,9 @@
 		<exclude-pattern>src/wp-widget/*</exclude-pattern>
 	</rule>
 
+	<!-- PHPUnit data providers use mixed types. -->
+	<rule ref="NeutronStandard.Functions.TypeHint.NoArgumentType">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+
 </ruleset>
