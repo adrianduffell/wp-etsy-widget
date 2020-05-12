@@ -15,7 +15,8 @@
 
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
-	
+	<exclude-pattern>*/dist/*</exclude-pattern>
+
 	<rule ref="NeutronStandard.Whitespace.RequireParenthesisSpacing.Missing">
 		<exclude-pattern>./</exclude-pattern>
 	</rule>
