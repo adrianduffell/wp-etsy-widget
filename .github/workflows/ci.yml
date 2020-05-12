@@ -7,7 +7,26 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  build-npm:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+        
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build with Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build
+    
+    - name: Test (NPM)
+      run: npm test
+     
+  build-composer:
 
     runs-on: ubuntu-latest
 
@@ -20,7 +39,7 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
 
-    - name: Lint
+    - name: Sniff PHP
       run: composer run-script phpcs
       
     - name: Start MySQL
@@ -29,5 +48,5 @@ jobs:
     - name: Install WordPress test environment
       run: bash bin/install-wp-tests.sh wordpress_test root root 127.0.0.1
 
-    - name: Test
+    - name: Test (Composer)
       run: composer run-script phpunit
