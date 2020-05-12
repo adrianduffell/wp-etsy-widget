@@ -1,4 +1,4 @@
-# Etsy WIdget for WordPress
+# Etsy Widget for WordPress
 
 Displays the latest products from a shop as a grid of thumbnails using a WordPress widget.
 
